@@ -95,7 +95,6 @@ public class LoginComponent extends Composite {
         show(property("login.failed") ,
              property("login.failed.description") ,
              Notification.Type.WARNING_MESSAGE);
-
     });
 
     cancel.setId(ID_BUTTON_CANCEL);

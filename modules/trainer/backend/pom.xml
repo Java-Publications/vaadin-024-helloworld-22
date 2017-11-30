@@ -17,5 +17,75 @@
       <groupId>org.rapidpm.vaadin</groupId>
       <artifactId>helloworld-modules-trainer-api</artifactId>
     </dependency>
+
+    <!-- Database driver for testing -->
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.zaxxer</groupId>
+      <artifactId>HikariCP</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.flywaydb</groupId>
+      <artifactId>flyway-core</artifactId>
+    </dependency>
+
+    <!--<dependency>-->
+      <!--<groupId>org.jooq</groupId>-->
+      <!--<artifactId>jooq</artifactId>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.jooq</groupId>-->
+      <!--<artifactId>jooq-codegen</artifactId>-->
+    <!--</dependency>-->
+
+    <dependency>
+      <groupId>com.speedment</groupId>
+      <artifactId>runtime</artifactId>
+      <type>pom</type>
+    </dependency>
+
+    <!--TDD-->
+    <dependency>
+      <groupId>org.testcontainers</groupId>
+      <artifactId>postgresql</artifactId>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-ext</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>org.rnorth.visible-assertions</groupId>
+      <artifactId>visible-assertions</artifactId>
+      <version>2.1.0</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
+
+
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.flywaydb</groupId>
+        <artifactId>flyway-maven-plugin</artifactId>
+        <configuration>
+          <!--<driver>org.postgresql.Driver</driver>-->
+          <!--<url>jdbc:postgresql://localhost:5432/postgres</url>-->
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.speedment</groupId>
+        <artifactId>speedment-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+
 </project>
