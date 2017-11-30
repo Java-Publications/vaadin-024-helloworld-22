@@ -4,7 +4,7 @@
  <img src="https://vaadin.com/images/hero-reindeer.svg" width="200" height="200" /></a>
 </center>
 
-# Backend Meets Frontend: Vaadin, Testcontainers, PostgreSQl and Flyway
+# Backend Meets Frontend: Vaadin, Testcontainers, PostgreSQL and Flyway
 How to set up a jUnit5 Test with 
 a PostgreSQL instance , managed by Testcontainers and organized with Flyway. 
 
